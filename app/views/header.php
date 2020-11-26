@@ -22,7 +22,7 @@
                 <li><a href="<?php echo URL_BASE . "consulta/entrada" ?>">Entradas</a></li>
                 <li><a href="<?php echo URL_BASE . "consulta/saida" ?>">Saídas</a></li>
                 <li><a href="<?php echo URL_BASE . "consulta/movimentacao" ?>">Movimentações</a></li>
-                <li><a href="<?php echo URL_BASE . "consulta/entrada" ?><?php echo URL_BASE . "consulta/venda" ?>">Vendas</a></li>
+                <li><a href="<?php echo URL_BASE . "vendas" ?>">Vendas</a></li>
             </ul>
         </li>
 
