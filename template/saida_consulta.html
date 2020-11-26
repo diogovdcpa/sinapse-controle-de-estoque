@@ -1,0 +1,178 @@
+
+<html lang="pt-br">
+<head>
+<title>Sistema de controle de estoque</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--css-->
+<link rel="stylesheet" href="js/datatables/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="js/datatables/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="js/datatables/css/style_dataTable.css">
+
+<link rel="stylesheet" href="css/grade.css">
+<link rel="stylesheet" href="css/auxiliar.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-m.css">
+
+</head>
+<body>
+	<div class="site">
+ 	<div class="base-topo">
+	<div class="conteudo d-flex justify-content-space-between">
+		<a href="" class="logo"><img src="img/logo.png"></a> <a href="" class="mobmenu"><i class="fas fa-bars"></i></a>
+		<ul class="menu">
+			<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+			<li class="sub"><a href="" rel="sub"><i	class="fas fa-arrow-circle-right"></i> Cadastros</a>
+				<ul>
+					<li><a href="lst_cliente.html">Cliente</a></li>
+					<li><a href="lst_produto.html">Produto</a></li>
+
+				</ul>
+			</li>
+		<li class="sub"><a href="" rel="sub"><i class="fas fa-boxes"></i>	Estoque</a>
+			<ul>
+				<li><a href="entrada_produto.html">Entrada de produtos</a></li>
+				<li><a href="entrada_saida.html">Saida de produto</a></li>
+			</ul>
+		</li>
+	<li><a href="form_venda.html"><i class="fas fa-arrow-circle-right"></i> Vendas</a></li>
+	
+	<li class="sub"><a href="" rel="sub"><i	class="fas fa-arrow-circle-right"></i> Consultas</a>
+		<ul>
+			<li><a href="entrada_consulta.html">Entradas</a></li>
+			<li><a href="saida_consulta.html">Saídas</a></li>
+			<li><a href="movimentacao_consulta.html">Movimentações</a></li>
+			<li><a href="venda_consulta.html">Vendas</a></li>
+		</ul>
+	</li>
+	
+	<li><a href=""><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+</ul>	
+</div>
+</div>
+
+            
+  <div class="conteudo">
+	<div class="base-home">
+		<div class="rows">
+			<div class="centro">
+				<div class="caixa">
+					<span class="titulo"><i class="fas fa-boxes"></i> Consulta de saída de produtos </span>
+					<div class="rows px-4 pb-5 pt-3">
+						<div class="col-12 p-2 text-right">					
+							<a href="" class="btn btn-verde d-inline-block filtro"><i class="fas fa-filter"></i> filtar</a>
+						</div>
+						<div class="col-12">
+							<form action="" method="GET">
+								<div class="">
+									<div class="base-form alt p-2 pb-4 mostraFiltro">
+										<div class="rows">
+											<div class="col-4">
+												<span class="label"> Produto</span> 
+												<select name="id_produto" class="form-campo">
+													<option value="">Selecione uma opção</option>
+													<option value='1' >Monitor CCE e</option><option value='2' >Teclado Multilaser </option>												</select>
+											</div>
+											<div class="col-3">
+												<span class="label"> Data início</span> 
+												<input type="date"  name="data_inicio" value="" class="form-campo">
+											</div>
+											<div class="col-3">
+												<span class="label"> Data Fim</span> 
+												<input type="date"  name="data_fim" value=""class="form-campo">
+											</div>
+											
+											<div class="col-2 mt-3 pt-2">
+												<input type="submit" name="Submit" class="btn btn-azul width-100" value="Pesquisar" id="btnInserir">
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-12">
+							<div class="tabela pt-2">
+								<table id="dataTable" width="100%" border="0" cellpadding="0"
+									cellspacing="0">
+									<thead>
+										<tr>
+											<th width="2%" align="center">Id</th>
+											<th width="34%" align="center">Data</th>
+											<th width="23%" align="center">Produto</th>
+											<th align="center">Quantidade</th>
+											<th align="center">Valor</th>
+											<th align="center">Subtotal</th>
+											<th align="center">Motivo</th>
+										</tr>
+									</thead>
+									<tbody id="lista_itens">
+										<tr>
+											<td align="center">1</td>
+											<td align="center">10/02/2017</td>
+											<td align="center">Monitor CCE e</td>
+											<td align="center">30</td>
+											<td align="center">0.00</td>
+											<td align="center">0.00</td>
+											<td align="center">Saída Avulsa</td>
+										</tr>
+										<tr>
+											<td align="center">2</td>
+											<td align="center">16/05/2020</td>
+											<td align="center">Monitor CCE e</td>
+											<td align="center">1</td>
+											<td align="center">500.00</td>
+											<td align="center">500.00</td>
+											<td align="center">Saida Avulsa</td>
+										</tr>
+										<tr>
+											<td align="center">3</td>
+											<td align="center">16/05/2020</td>
+											<td align="center">Teclado Multilaser </td>
+											<td align="center">1</td>
+											<td align="center">20.00</td>
+											<td align="center">20.00</td>
+											<td align="center">Saida Avulsa</td>
+										</tr>
+										<tr>
+											<td align="center">4</td>
+											<td align="center">16/05/2020</td>
+											<td align="center">Teclado Multilaser </td>
+											<td align="center">10</td>
+											<td align="center">20.00</td>
+											<td align="center">200.00</td>
+											<td align="center">Saida Avulsa</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th align="center">Id</th>
+											<th align="center">Data</th>
+											<th align="center">Produto</th>
+											<th align="center">Quantidade</th>
+											<th align="center">Valor</th>
+											<th align="center">Subtotal</th>
+											<th align="center">Motivo</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>    
+</div>
+	
+		 
+		<script src="js/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://kit.fontawesome.com/9480317a2f.js"></script>
+		<script src="js/js.js"></script>
+		<script src="js//componentes/js_modal.js"></script>
+		<script src="js/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="js/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="js/componentes/js_data_table.js"></script> 
+		
+</body>
+</html>

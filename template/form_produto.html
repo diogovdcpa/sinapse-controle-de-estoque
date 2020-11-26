@@ -1,0 +1,133 @@
+
+<html lang="pt-br">
+<head>
+<title>Sistema de controle de estoque</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--css-->
+<link rel="stylesheet" href="js/datatables/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="js/datatables/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="js/datatables/css/style_dataTable.css">
+
+<link rel="stylesheet" href="css/grade.css">
+<link rel="stylesheet" href="css/auxiliar.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-m.css">
+
+</head>
+<body>
+	<div class="site">
+ 	<div class="base-topo">
+	<div class="conteudo d-flex justify-content-space-between">
+		<a href="" class="logo"><img src="img/logo.png"></a> <a href="" class="mobmenu"><i class="fas fa-bars"></i></a>
+		<ul class="menu">
+			<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+			<li class="sub"><a href="" rel="sub"><i	class="fas fa-arrow-circle-right"></i> Cadastros</a>
+				<ul>
+					<li><a href="lst_cliente.html">Cliente</a></li>
+					<li><a href="lst_produto.html">Produto</a></li>
+
+				</ul>
+			</li>
+		<li class="sub"><a href="" rel="sub"><i class="fas fa-boxes"></i>	Estoque</a>
+			<ul>
+				<li><a href="entrada_produto.html">Entrada de produtos</a></li>
+				<li><a href="entrada_saida.html">Saida de produto</a></li>
+			</ul>
+		</li>
+	<li><a href="form_venda.html"><i class="fas fa-arrow-circle-right"></i> Vendas</a></li>
+	
+	<li class="sub"><a href="" rel="sub"><i	class="fas fa-arrow-circle-right"></i> Consultas</a>
+		<ul>
+			<li><a href="entrada_consulta.html">Entradas</a></li>
+			<li><a href="saida_consulta.html">Saídas</a></li>
+			<li><a href="movimentacao_consulta.html">Movimentações</a></li>
+			<li><a href="venda_consulta.html">Vendas</a></li>
+		</ul>
+	</li>
+	
+	<li><a href=""><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+</ul>	
+</div>
+</div>
+
+            
+  <div class="conteudo">
+	<div class="base-home">
+	<div class="caixa mb-3">								
+		<span class="titulo"><i class="fas fa-arrow-circle-right" aria-hidden="true"></i> Cadastrar Produto</span>
+		<form action="" method="POST">			
+			<div class="base-form p-2 pb-4">
+					<div class="px-4">			
+					<!--mensagens-->
+					<span class="msg sucesso"><i class="fas fa-check"></i> Mensagem de sucesso <a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></span>
+					<span class="msg erro"><i class="fas fa-exclamation-triangle"></i> Mensagem de erro<a href="javascript:;" onclick="fecharMsg()" class="fas fa-times float-right"></a></span>
+	
+					<div class="rows mt-4">
+						<div class="col-4 img-up">
+							<div class="campo-upload">
+								<label for="arquivo">
+									<img src="http://localhost/trabalho/metodoagora/layouts/estoque/assets/img/img-semproduto.png" id="imgUp" class="img-fluido">
+									<span>Inserir produto</span>
+								</label>
+								<input type="file" name="arquivo" id="arquivo" onchange="pegaArquivo(this.files)"> 
+							</div>
+							<div id="uploadStatus"></div>
+						</div>
+						<div class="col-8">
+							<div class="rows">
+								<div class="col-12 mb-3">
+									<span class="label">Produto</span> <input type="text" name="produto"
+										id="txt_twitter" value="" class="form-campo">
+								</div>
+								<div class="col-3 mb-3">
+									<span class="label">Preço</span> <input
+										type="text" name="preco" id="" value="" class="form-campo">
+								</div>
+								<div class="col-3 mb-3">
+									<span class="label">Estoque Inicial</span> <input type="text" name="estoque_inicial"
+										id="" value="" class="form-campo">
+								</div>
+
+								<div class="col-3 mb-3">
+									<span class="label">Estoque Mínimo</span> <input type="text" name="estoque_minimo" id=""
+										value="" class="form-campo">
+								</div>
+								
+							<div class="col-3 mb-3">
+								<span class="label">Estoque atual</span> <input type="text" name="estoque_atual"
+									id="" value="" class="form-campo">
+							</div>
+							</div>
+							
+							<div class="mt-2">
+								<input type="hidden" name="id_produto" value="" >					  
+							
+								<input type="submit" value="Salvar alterações"
+									class="btn btn-azul m-auto d-table">
+							</div>
+						</div>
+							
+						</div>
+					 </div>
+							  	
+				</div>
+			</form>
+		
+		</div>
+		
+	</div>        
+</div>
+	
+		 
+		<script src="js/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://kit.fontawesome.com/9480317a2f.js"></script>
+		<script src="js/js.js"></script>
+		<script src="js//componentes/js_modal.js"></script>
+		<script src="js/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="js/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="js/componentes/js_data_table.js"></script> 
+		
+</body>
+</html>

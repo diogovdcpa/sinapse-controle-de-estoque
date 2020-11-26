@@ -1,0 +1,130 @@
+.mobmenu{display:none}
+
+/*1600*/
+@media (max-width:1600px){
+	
+	.conteudo{
+		    width: 1250px;
+	}
+}
+
+/*1422px*/
+@media (max-width:1422px){
+	
+	.conteudo{
+		    width: 1140px;
+	}
+}
+
+/*1280*/
+@media (max-width:1280px){
+	
+	.conteudo{
+		    width: 1100px;
+	}
+}
+
+
+/*991*/
+@media (max-width:991px){
+	.base-login{padding:0 2%;padding-top:3%}
+.base-topo{padding:10px 0}
+	.base-home .col-3 .caixa, .base-home .col-4 .caixa {
+    /*background: #9968B2!important;*/
+	box-shadow:none
+	}
+	.mobmenu{display:block;font-size:2rem;float:right;color:#3bbde9}
+	.menu{
+		display:none;
+		position:fixed;
+		left:0;
+		width:20%;
+		background:linear-gradient(#1e8db1,#036789,#2190b4);
+		background:-webkit-linear-gradient(#1e8db1,#036789,#2190b4);
+		background:-moz-linear-gradient(#1e8db1,#036789,#2190b4);
+		background:-o-linear-gradient(#1e8db1,#036789,#2190b4);
+		bottom:0;
+		top:0;
+		height:100vh;
+		overflow-y:auto
+	}
+	.base-topo ul.menu li a {padding: .8rem 1.8rem;}
+	.base-topo ul.menu li{
+		display:block;
+		border-right:0;
+		text-transform:uppercase;
+		position:relative;
+		margin-left:0;
+		transition:all .5s linear;
+		    border-bottom: solid 1px #00bcd4;
+			background:-webkit-linear-gradient(#1e8db1,#036789,#2190b4)
+	}
+	.conteudo{
+		padding:0 1rem
+	}
+	.base-topo ul.menu .sub ul {width:100%;position:inherit;display:block;margin-top: 0;opacity:1;border-right:0;border-left:0}
+	.base-topo ul.menu .sub ul li a {
+		padding: .8rem 1rem;
+		font-size: .9rem;
+	}.base-topo ul.menu a[rel="sub"] {
+		display:none
+	}
+	.base-topo ul.menu .sub.lateral ul {
+		width: 100%;
+		right: 0;
+		top: 0;
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0s, opacity 0.5s linear;
+		z-index: 3;
+		position: inherit;
+		border-bottom:0;
+		border-top:0;
+	}
+	.base-topo ul.menu .sub.lateral:after {
+    border-left: solid 5px transparent;
+    border-top: solid 5px #9968b2;
+	}
+	.base-topo ul.menu li a i{display:none}
+	
+}
+
+/**/
+@media (max-width:830px){
+	.menu {
+    width: 27%;
+	}
+	.base-login{padding:0 4%;padding-top:3%}
+}
+
+/**/
+@media (max-width:640px){
+	.menu {
+    width: 33%;
+	}
+}
+
+/**/
+@media (max-width:490px){
+	.menu {
+    width: 42%;
+	}
+	#tab ul>li {
+    display: block;margin-bottom:4px
+	}
+	.titulo{font-size: 1.1rem;}
+}
+
+/**/
+@media (max-width:400px){
+	.menu {
+    width: 59%;
+	}
+}
+
+/**/
+@media (max-width:300px){
+	.menu {
+    width: 82%
+	}
+}
