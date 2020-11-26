@@ -1,5 +1,5 @@
 <div class="conteudo d-flex justify-content-space-between">
-    <a href="" class="logo"><img src="<?php echo ASSETS ?>img/logo.png"></a> <a href="" class="mobmenu"><i class="fas fa-bars"></i></a>
+    <a href="<?php echo URL_BASE ?>" class="logo"><img src="<?php echo ASSETS ?>img/logo.png"></a> <a href="" class="mobmenu"><i class="fas fa-bars"></i></a>
     <ul class="menu">
         <li><a href="<?php echo URL_BASE ?>"><i class="fas fa-home"></i> Home</a></li>
         <li class="sub"><a href="" rel="sub"><i class="fas fa-arrow-circle-right"></i> Cadastros</a>
